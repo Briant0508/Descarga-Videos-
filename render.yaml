@@ -1,12 +1,9 @@
 services:
   - type: web
-    name: telegram-video-bot-advanced
+    name: telegram-video-bot
     env: python
     plan: free
-    buildCommand: |
-      pip install -r requirements.txt
-      sudo apt-get update
-      sudo apt-get install -y ffmpeg
+    buildCommand: pip install -r requirements.txt
     startCommand: python bot.py
     envVars:
       - key: BOT_TOKEN
